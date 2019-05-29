@@ -24,6 +24,14 @@ namespace AhpilyServer
         //客户端对象的链接池
         private ClientPeerPool clientPeerPool;
 
+        //应用层
+        private IApplication application;
+
+        public void SetApplication(IApplication app)
+        {
+            this.application = app;
+        }
+
         public ServerPeer()
         {
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -189,7 +197,7 @@ namespace AhpilyServer
         private void receiveCompleted(ClientPeer client, SocketMsg msg)
         {
             //给应用层使用
-            //TODO
+            application.OnReceive(client, msg);
         }
 
 
@@ -209,6 +217,7 @@ namespace AhpilyServer
                     throw new Exception("当前指定的客户端连接对象为空，无法断开连接");
 
                 //通知应用层 这个客户端断开连接了
+                application.OnDisconnect(client);
 
                 client.Disconnect();
                 //回收对象方便下次使用

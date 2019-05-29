@@ -1,2 +1,4 @@
 G:\vsProjects\GameServer\GameServer\obj\Debug\GameServer.csprojAssemblyReference.cache
 G:\vsProjects\GameServer\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
+C:\vsProjects\GameServer\GameServer\obj\Debug\GameServer.csprojAssemblyReference.cache
+C:\vsProjects\GameServer\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
