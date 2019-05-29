@@ -1,0 +1,2 @@
+G:\vsProjects\GameServer\AhpilyServer\obj\Debug\AhpilyServer.csprojAssemblyReference.cache
+G:\vsProjects\GameServer\AhpilyServer\obj\Debug\AhpilyServer.csproj.CoreCompileInputs.cache
